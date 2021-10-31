@@ -1,0 +1,49 @@
+@import "./sizes";
+
+@mixin mob {
+  @media screen and (min-width: map-get($sizes,"mobile")) {
+    @content;
+  }
+}
+
+@mixin mob-lan {
+  @media screen and (min-width: map-get($sizes, "mobile-landscape")) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media screen and (min-width: map-get($sizes, "tablet")) {
+    @content;
+  }
+}
+
+@mixin tab-lan {
+  @media screen and (min-width: map-get($sizes, "tablet-landscape")) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: map-get($sizes, "desktop")) {
+    @content;
+  }
+}
+
+@mixin notebook {
+  @media screen and (min-width: map-get($sizes, "notebook")) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width: map-get($sizes, "laptop")) {
+    @content;
+  }
+}
+
+@mixin page {
+  @media screen and (min-width: map-get($sizes, "page")) {
+    @content;
+  }
+}

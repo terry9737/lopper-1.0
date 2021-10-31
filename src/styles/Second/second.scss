@@ -1,0 +1,160 @@
+@use "../variables/colors" as *;
+@use "../variables/layout" as *;
+@use "../variables/layout" as *;
+@use "../variables/breakpoints" as *;
+
+@import "../../../node_modules/rfs/scss.scss";
+.second_cards {
+  position: relative;
+
+  &-wrapper {
+    flex-grow: 1;
+  }
+}
+
+.inner_card {
+  @include flex-center(row);
+  justify-content: space-between;
+  padding: 50px 0px;
+
+  h5 {
+    color: $white;
+    @include font-size(25px);
+  }
+
+  p {
+    color: $white;
+    @include font-size(16px);
+    max-width: 273px;
+  }
+}
+
+.card_one {
+  background: $purpleLigth;
+}
+.card_two {
+  background: $purpleMedium;
+}
+.card_three {
+  background: $purpleHard;
+}
+
+.second_image {
+  display: none;
+}
+
+@include tab {
+  .inner_card {
+    max-width: 530px;
+    width: 100%;
+
+    h5 {
+      color: $white;
+      @include font-size(25px);
+    }
+
+    p {
+      @include font-size(16px);
+      max-width: 326px;
+      padding-right: 50px;
+    }
+  }
+  .second_image {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    height: 746px;
+    background: url("../../images/asider.png");
+    background-color: $red;
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@include tab-lan {
+  .inner_card {
+    max-width: 600px;
+
+    & h5 {
+      @include font-size(27px);
+    }
+    & p {
+      max-width: 365px;
+      @include font-size(18px);
+      padding-right: 0;
+    }
+  }
+
+  .second_image {
+    width: 100%;
+    max-width: 311px;
+    height: 715px;
+  }
+}
+@include desktop {
+  .inner_card {
+    max-width: 600px;
+
+    & h5 {
+      @include font-size(27px);
+    }
+    & p {
+      max-width: 365px;
+      @include font-size(18px);
+      padding-right: 0;
+    }
+  }
+
+  .second_image {
+    width: 100%;
+    max-width: 411px;
+    height: 735px;
+  }
+}
+@include notebook {
+  .inner_card {
+    padding: 123px 0px;
+    max-width: 767px;
+
+    & h5 {
+      @include font-size(27px);
+    }
+    & p {
+      max-width: 365px;
+      @include font-size(18px);
+      padding-right: 0;
+    }
+  }
+
+  .second_image {
+    width: 100%;
+    max-width: 411px;
+    height: 1146px;
+  }
+}
+// @include tab-lan {
+//   .second_cards {
+//     .inner_card {
+//       @include flex-center(row);
+//       justify-content: space-between;
+//       padding: 50px 0px;
+//       max-width: 582px;
+//       h5 {
+//         color: $white;
+//         @include font-size(25px);
+//       }
+
+//       p {
+//         color: $white;
+//         @include font-size(16px);
+//         max-width: 261px;
+//       }
+//     }
+//   }
+
+//

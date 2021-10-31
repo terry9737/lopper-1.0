@@ -1,0 +1,21 @@
+@use "./breakpoints" as *;
+
+$main_font: 16px;
+
+$nav: (
+  "logo": 1.5rem,
+  "links": 0.9rem,
+  "heading": 6.18rem,
+  "asider": 1.125rem,
+  "slider": 0.7875rem,
+);
+
+@include tab-lan {
+  $nav: (
+    "logo": 4.5rem,
+    "links": 0.9rem,
+    "heading": 6.18rem,
+    "asider": 1.125rem,
+    "slider": 0.7875rem,
+  );
+}

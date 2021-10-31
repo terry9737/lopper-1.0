@@ -1,0 +1,49 @@
+@use "../variables/breakpoints" as *;
+@use "../variables/colors" as *;
+@use "../variables/layout" as *;
+@import "../../../node_modules/rfs/scss.scss";
+.third {
+  margin-top: 182px;
+}
+.numbers {
+  margin-top: 118px;
+  margin-bottom: 180px;
+  @include flex-center(column);
+
+  @include tab {
+    @include flex-center(row);
+    justify-content: space-evenly;
+  }
+
+  .number_one {
+    @include flex-center(column);
+    margin-bottom: 50px;
+    @include tab {
+      margin-bottom: 0px;
+    }
+    h1 {
+      @include font-size(99px);
+      color: $red;
+    }
+
+    p {
+      @include font-size(12.6px);
+      color: $black;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+    }
+  }
+
+  .number_two {
+    @extend .number_one;
+    h1 {
+      color: $purpleLigth;
+    }
+  }
+  .number_three {
+    @extend .number_one;
+    h1 {
+      color: $green;
+    }
+  }
+}

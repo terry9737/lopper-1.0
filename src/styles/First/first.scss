@@ -1,0 +1,110 @@
+@use "../variables/colors" as *;
+@use "../variables//layout" as *;
+@use "../variables/breakpoints" as *;
+@import "../../../node_modules/rfs/scss.scss";
+.padded_cont {
+  @include padding-top(180px);
+  @include padding-bottom(113px);
+}
+.first_text {
+  @include font-size(27px);
+  font-weight: 500;
+  color: $black;
+  margin-top: 18px;
+  margin-bottom: 79px;
+
+  @include tab {
+    width: 98%;
+  }
+  @include tab-lan {
+    width: 82%;
+  }
+  @include desktop {
+    width: 80%;
+  }
+  @include notebook {
+    width: 70%;
+  }
+}
+.first_grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  place-items: center;
+  @include margin-bottom(10px);
+
+  &-card {
+    max-width: 380px;
+    padding: 5px;
+    @include flex-center(column);
+    align-items: center;
+
+    .icon {
+      height: 72px;
+      max-width: 72px;
+      //   height: 100%;
+      width: 100%;
+      border: 1px solid $red;
+      border-radius: 999px;
+      @include flex-center(row);
+      @include margin-bottom(18px);
+    }
+
+    .title {
+      @include font-size(27px);
+      @include margin-bottom(13px);
+      color: $black;
+      font-weight: 500;
+    }
+
+    .text {
+      @include font-size(16.2px);
+      font-weight: 400;
+      color: $gray;
+      text-align: center;
+    }
+  }
+}
+
+@include tab {
+  .first_text {
+    @include font-size(27px);
+  }
+  .first_grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    @include margin-bottom(117px);
+
+    &-card {
+      max-width: 380px;
+      padding: 5px;
+      @include flex-center(column);
+      align-items: flex-start;
+
+      .icon {
+        height: 72px;
+        max-width: 72px;
+        //   height: 100%;
+        width: 100%;
+        border: 1px solid red;
+        border-radius: 999px;
+        @include flex-center(row);
+        @include margin-bottom(18px);
+      }
+
+      .title {
+        @include font-size(27px);
+        @include margin-bottom(13px);
+        color: $black;
+        font-weight: 500;
+      }
+
+      .text {
+        @include font-size(16.2px);
+        font-weight: 400;
+        color: $gray;
+        text-align: left;
+      }
+    }
+  }
+}

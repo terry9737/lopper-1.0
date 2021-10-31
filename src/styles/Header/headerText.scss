@@ -1,0 +1,42 @@
+@use "../variables/layout" as *;
+@use "../variables/colors" as *;
+@import "../../../node_modules/rfs/scss.scss";
+.header_text {
+  @include flex-center(row);
+  justify-content: space-between;
+
+  &-mission {
+    &__question {
+      color: $white;
+      @include font-size(14.4px);
+      font-weight: 800;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      @include margin-bottom(18px);
+    }
+
+    &__main {
+      @include font-size(99px);
+      color: $white;
+      font-weight: 900;
+      line-height: 1.1;
+
+      & span {
+        color: $red;
+      }
+    }
+  }
+
+  &-scroll {
+    p {
+      @include font-size(12.6px);
+      letter-spacing: 6px;
+      color: $white;
+      text-transform: uppercase;
+      font-weight: 800;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      margin-bottom: 25px;
+    }
+  }
+}

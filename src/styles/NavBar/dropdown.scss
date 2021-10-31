@@ -1,0 +1,35 @@
+@use "../variables/breakpoints" as *;
+@use "../variables/layout" as *;
+
+.navbar_dropdown {
+  width: 100%;
+  overflow: hidden;
+  max-height: 500px;
+  transition: all 0.5s linear;
+  @include tab-lan {
+    display: none;
+  }
+
+  &-closed {
+    @extend .navbar_dropdown;
+    max-height: 0px;
+  }
+}
+
+.navbar_dropdown-default {
+  @extend .navbar_dropdown;
+  display: none;
+
+  @include tab-lan {
+    display: block;
+    .navbar_links {
+      @include flex-center(row);
+      margin: 0px;
+
+      li {
+        margin-bottom: 0px;
+        margin-left: 3.375em;
+      }
+    }
+  }
+}

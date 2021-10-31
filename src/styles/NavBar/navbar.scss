@@ -1,0 +1,115 @@
+@use "../variables/colors" as *;
+@use "../variables/fonts" as *;
+@use "../variables/layout" as *;
+@use "../variables/breakpoints" as *;
+@import "../../../node_modules/rfs/scss.scss";
+
+.navbar {
+  padding-top: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $white;
+  @include margin-bottom(122px);
+  @include tab-lan {
+    flex-direction: row;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  &_aligner {
+    @include flex-center(row);
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &_logo {
+    @include font-size(24px);
+    color: inherit;
+    cursor: pointer;
+    transition: color 0.5s linear;
+
+    @include desktop {
+      line-height: 2;
+      margin-bottom: 1em;
+    }
+
+    &:hover {
+      background-color: red;
+      background-image: url("../../images/wave.svg");
+      background-size: cover;
+      background-position: 70%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    @include tab-lan {
+      margin-bottom: 8px;
+    }
+  }
+
+  &_links {
+    @include flex-center(column);
+    margin-bottom: 1rem;
+
+    li {
+      margin-bottom: 1em;
+      @include font-size(px);
+      overflow: hidden;
+
+      &::after {
+        content: "";
+        display: block;
+        // position: absolute;
+        height: 3px;
+        width: 100%;
+        background: $white;
+        transform: translateX(-100px);
+        transition: transform 0.4s linear;
+      }
+
+      &:hover::after {
+        transform: translateX(0px);
+      }
+    }
+  }
+  &_phone {
+    @include flex-center(row);
+    @include tab-lan {
+      margin-left: 98px;
+    }
+    p {
+      overflow: hidden;
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: $white;
+        transform: translateX(-200px);
+        transition: transform 0.4s linear;
+      }
+
+      &:hover::after {
+        transform: translateX(0px);
+      }
+    }
+
+    i {
+      @include flex-center(row);
+      margin-right: 0.5em;
+    }
+    a {
+      @include flex-center(row);
+      @include font-size(14.4px);
+
+      & > svg {
+        @include font-size(18px);
+        color: $white;
+      }
+    }
+  }
+}

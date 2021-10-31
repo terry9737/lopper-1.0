@@ -1,0 +1,40 @@
+@import "../variables/breakpoints";
+.main_container {
+  margin: 0 auto;
+  &.pink {
+    background: pink;
+  }
+
+  @include desktop {
+    max-width: 1100px;
+  }
+  @include notebook {
+    max-width: 1400px;
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  @include mob {
+    padding: 0px 10px;
+  }
+  @include mob-lan {
+    padding: 0px 20px;
+  }
+  @include tab {
+    padding: 0px 30px;
+  }
+  @include tab-lan {
+    padding: 0px 40px;
+  }
+  @include desktop {
+    padding: 0px 60px;
+  }
+  @include notebook {
+    padding: 0px 147px;
+  }
+  &.full {
+    width: 100%;
+    padding: 0px;
+  }
+}

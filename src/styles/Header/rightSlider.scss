@@ -1,0 +1,73 @@
+@use "../variables/layout" as *;
+@use "../variables/colors" as *;
+@use "../variables/breakpoints" as *;
+@import "../../../node_modules/rfs/scss.scss";
+.right_slider {
+  background: pink;
+  width: 90%;
+  @include padding-top(50px);
+  @include padding-bottom(146px);
+  &-wrapper {
+    @include flex-center(row);
+    justify-content: space-between;
+    padding: 5px 20px 5px 20px;
+    border: 1px solid $white;
+    width: 100%;
+
+    &__text {
+      @include font-size(15px);
+      font-weight: 400;
+      color: $white;
+      max-width: 80%;
+    }
+
+    span {
+      width: 40px;
+      height: 40px;
+      border: 1px solid $white;
+      border-radius: 999px;
+      @include flex-center(row);
+      cursor: pointer;
+      overflow: hidden;
+
+      svg {
+        font-size: 18px;
+        color: $white;
+        transition: all 0.3s linear;
+
+        &:first-child {
+          transform: translateX(-100px);
+          color: red;
+        }
+        &:last-child {
+          transform: translateX(-9px);
+        }
+      }
+
+      &:hover {
+        svg:first-child {
+          transform: translateX(9px);
+        }
+        svg:last-child {
+          transform: translateX(100px);
+        }
+      }
+    }
+  }
+}
+
+@include tab {
+  .right_slider {
+    max-width: 833px;
+    @include padding-top(50px);
+
+    &-wrapper {
+      padding: 35px 50px 36px 120px;
+
+      &__text {
+        @include font-size(18px);
+        max-width: 90%;
+      }
+    }
+  }
+}

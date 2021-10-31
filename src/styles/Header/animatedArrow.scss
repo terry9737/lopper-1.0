@@ -1,0 +1,26 @@
+@use "../variables/layout" as *;
+@use "../variables/colors" as *;
+.header_text-scroll-arrow {
+  @include flex-center(row);
+  justify-content: center;
+
+  svg {
+    font-size: 22px;
+    color: $white;
+    animation: pop 3s infinite;
+  }
+
+  @keyframes pop {
+    0% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(10px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
