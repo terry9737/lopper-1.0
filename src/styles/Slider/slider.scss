@@ -1,0 +1,174 @@
+@use "../main.scss" as *;
+
+.swiper {
+  &_slide {
+    position: relative;
+  }
+}
+.image_container {
+  @include flex-center(row);
+  @include margin-top(180px);
+  &-wrapper {
+    max-width: 250px;
+    position: relative;
+    @include tab {
+      max-width: 350px;
+    }
+    @include desktop {
+      max-width: 100%;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+    }
+    .comma {
+      position: absolute;
+      max-width: 72.25px;
+      max-height: 59.73px;
+      width: 100%;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      bottom: -10px;
+
+      @include tab {
+        max-width: 92.25px;
+      }
+    }
+  }
+}
+.swiper_text {
+  font-style: italic;
+  @include font-size(36px);
+  color: $black;
+  text-align: center;
+  line-height: 3.991rem;
+  @include mob-lan {
+    margin: 0 auto;
+    max-width: 79%;
+    @include margin-top(67.92px);
+  }
+  @include tab {
+    max-width: 72%;
+  }
+  @include tab-lan {
+    max-width: 72%;
+  }
+  @include notebook {
+    max-width: 54%;
+  }
+}
+.swiper_subtext {
+  @include font-size(18px);
+  font-weight: 400;
+  text-align: center;
+  @include margin-top(30px);
+  span {
+    font-weight: 800;
+    color: $red;
+  }
+}
+.swiper-button-prev {
+  height: 36px;
+  width: 36px;
+  background: $red;
+  border-radius: 999px;
+  background-image: url("../../images/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  margin-left: 30px;
+  @include tab {
+    margin-left: 40px;
+    @include margin-top(300px);
+  }
+  @include tab-lan {
+    margin-left: 60px;
+  }
+  @include desktop {
+    margin-left: 100px;
+  }
+  &::after {
+    display: none;
+  }
+}
+.swiper-button-next {
+  height: 36px;
+  width: 36px;
+  background: $red;
+  border-radius: 999px;
+  background-image: url("../../images/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  transform: rotate(180deg);
+  margin-right: 30px;
+  @include tab {
+    margin-right: 40px;
+    @include margin-top(300px);
+  }
+  @include tab-lan {
+    margin-right: 60px;
+  }
+  @include desktop {
+    margin-right: 100px;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.dots_wrapper {
+  .dot:nth-child(1) {
+    top: 180px;
+    left: calc(100vw - 90vw);
+  }
+  .dot:nth-child(2) {
+    top: 300px;
+    left: calc(100vw - 99vw);
+  }
+  .dot:nth-child(3) {
+    top: 100px;
+    left: calc(100vw - 95vw);
+  }
+  .dot:nth-child(4) {
+    top: calc(100vh - 50vh);
+    left: calc(100vw - 40vw);
+  }
+  .dot:nth-child(5) {
+    top: 200px;
+    left: calc(100vw - 40vw);
+  }
+  .dot:nth-child(6) {
+    top: 10px;
+    left: calc(100vw - 50vw);
+  }
+  .dot:nth-child(7) {
+    top: 400px;
+    left: calc(100vw - 45vw);
+  }
+  @include mob-lan {
+    .dot {
+      left: +10px;
+    }
+  }
+}
+
+.dot {
+  position: absolute;
+  top: 0;
+  max-width: 30%;
+  @include tab {
+    max-width: 50%;
+  }
+  @include laptop {
+    max-width: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

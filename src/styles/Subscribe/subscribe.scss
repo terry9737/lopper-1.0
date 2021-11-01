@@ -1,0 +1,81 @@
+@use "../main.scss" as *;
+
+.subscribe {
+  @include margin-top(263px);
+  margin-bottom: 100px;
+  h3 {
+    @include font-size(45px);
+    font-weight: 500;
+    color: $black;
+    text-align: center;
+    @include margin-bottom(23px);
+  }
+
+  p {
+    @include font-size(18px);
+    @include margin-bottom(63px);
+    color: $gray;
+    text-align: center;
+  }
+
+  form {
+    @include flex-center(row);
+
+    div {
+      @include flex-center(column);
+      @include mob-lan {
+        @include flex-center(row);
+        align-items: flex-end;
+      }
+    }
+    input {
+      border-radius: 0px;
+      border: none;
+      outline: none;
+      @include font-size(18px);
+      color: $gray;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      max-width: 70%;
+      text-align: center;
+      @include padding(16.5px);
+      box-shadow: 0 10px 100px 0 rgba(0, 0, 0, 0.1);
+      @include margin-bottom(10px);
+      @include mob-lan {
+        @include margin-bottom(0px);
+      }
+
+      &::placeholder {
+        text-transform: uppercase;
+        color: $gray;
+        font-weight: 800;
+        @include font-size(18px);
+        letter-spacing: 4px;
+      }
+    }
+
+    button {
+      background: $white;
+      border-radius: 0px;
+      border: none;
+      @include font-size(12.6px);
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      color: $red;
+      font-weight: 800;
+      @include flex-center(row);
+      @include padding(13.5px 28px);
+      cursor: pointer;
+      box-shadow: 0 10px 100px 0 rgba(0, 0, 0, 0.1);
+
+      span {
+        width: 27px;
+        height: 27px;
+        border: 1px solid $red;
+        border-radius: 999px;
+        @include flex-center(row);
+        @include margin-left(20px);
+      }
+    }
+  }
+}

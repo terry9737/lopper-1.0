@@ -1,0 +1,90 @@
+@use "../main.scss" as *;
+
+footer {
+  @include flex-center(column);
+}
+
+.footer_main {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+
+  &-prime {
+    @include flex-center(column);
+    align-items: flex-start;
+    grid-column: span 2 / span 2;
+
+    &__title {
+      color: $white;
+      @include font-size(24px);
+      letter-spacing: 2px;
+      font-weight: 900;
+      @include margin-bottom(17px);
+    }
+
+    &__text {
+      @extend .footer_main-prime__title;
+      @include font-size(16.2px);
+      font-weight: 400;
+      width: 57%;
+    }
+  }
+
+  &-menu {
+    p {
+      @include font-size(12.6px);
+      color: $white;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      font-weight: 800;
+      border-bottom: 1px solid $red;
+      padding-bottom: 10px;
+      @include margin-bottom(28px);
+    }
+
+    li {
+      color: $white;
+      margin-bottom: 5px;
+      a {
+        color: inherit;
+      }
+    }
+  }
+
+  &-services {
+    @extend .footer_main-menu;
+  }
+  &-contact {
+    @extend .footer_main-menu;
+    grid-column: span 2 / span 2;
+    p {
+      text-align: center;
+    }
+    span {
+      @include margin-right(18px);
+    }
+  }
+  &-follow {
+    @extend .footer_main-menu;
+    grid-column: span 2 / span 2;
+    p {
+      text-align: center;
+    }
+    ul {
+      @include flex-center(row);
+      & li:first-child {
+        @include margin-left(0px);
+      }
+
+      li {
+        @include margin-left(41.4px);
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

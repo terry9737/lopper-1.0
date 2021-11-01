@@ -1,4 +1,10 @@
-@use "./variables/fonts" as *;
+@import "./variables/fonts";
+@import "./variables/breakpoints";
+@import "./variables/colors";
+@import "./variables/fonts";
+@import "./variables/layout";
+@import "./variables/sizes";
+@import "../../node_modules/rfs/scss.scss";
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;800;900&display=swap");
 
 :root {

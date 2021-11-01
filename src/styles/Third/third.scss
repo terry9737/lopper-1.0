@@ -1,7 +1,4 @@
-@use "../variables/breakpoints" as *;
-@use "../variables/colors" as *;
-@use "../variables/layout" as *;
-@import "../../../node_modules/rfs/scss.scss";
+@use "../main.scss" as *;
 .third {
   margin-top: 182px;
 }

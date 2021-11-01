@@ -1,8 +1,4 @@
-@use "../variables/colors" as *;
-@use "../variables/layout" as *;
-@use "../variables/breakpoints" as *;
-
-@import "../../../node_modules/rfs/scss.scss";
+@use "../main.scss" as *;
 .fourth {
   background-color: $purpleMedium;
 

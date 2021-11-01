@@ -1,9 +1,4 @@
-@use "../variables/colors" as *;
-@use "../variables/fonts" as *;
-@use "../variables/layout" as *;
-@use "../variables/breakpoints" as *;
-@import "../../../node_modules/rfs/scss.scss";
-
+@use "../main.scss" as *;
 .navbar {
   padding-top: 4.5rem;
   display: flex;

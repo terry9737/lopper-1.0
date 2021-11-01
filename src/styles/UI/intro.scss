@@ -1,6 +1,4 @@
-@use "../variables/colors" as *;
-@use "../variables/breakpoints" as *;
-@import "../../../node_modules/rfs/scss.scss";
+@use "../main.scss" as *;
 .intro {
   p {
     @include font-size(12.6px);
