@@ -18,6 +18,7 @@ const Slider = () => {
           spaceBetween={0}
           slidesPerView={1}
           navigation={true}
+          grabCursor={true}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
         >

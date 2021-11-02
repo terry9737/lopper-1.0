@@ -31,7 +31,7 @@
       background-clip: text;
       -webkit-background-clip: text;
       cursor: pointer;
-      transition: background-size 0.2s linear;
+      transition: background-size 0.6s linear;
 
       &:hover {
         color: transparent;
@@ -59,7 +59,7 @@
       background-clip: text;
       -webkit-background-clip: text;
       cursor: pointer;
-      transition: background-size 0.2s linear;
+      transition: background-size 0.6s linear;
     }
   }
   .number_three {
@@ -74,7 +74,7 @@
       background-clip: text;
       -webkit-background-clip: text;
       cursor: pointer;
-      transition: background-size 0.2s linear;
+      transition: background-size 0.6s linear;
 
       &:hover {
         background-size: 150%;

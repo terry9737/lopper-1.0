@@ -2,6 +2,13 @@
 .fourth {
   background-color: $purpleMedium;
 
+  @include tab-lan {
+    background-image: url("../../images/landing-bg.svg");
+    background-position: -300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   &_grid {
     @include flex-center(row);
     justify-content: center;
