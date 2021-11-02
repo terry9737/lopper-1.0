@@ -24,13 +24,21 @@
     }
 
     span {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
       border: 1px solid $white;
       border-radius: 999px;
       @include flex-center(row);
       cursor: pointer;
       overflow: hidden;
+      @include mob {
+        width: 30px;
+        height: 30px;
+      }
+      @include tab {
+        width: 45px;
+        height: 45px;
+      }
 
       svg {
         font-size: 18px;
@@ -42,13 +50,19 @@
           color: red;
         }
         &:last-child {
-          transform: translateX(-9px);
+          transform: translateX(-7px);
+          @include tab {
+            transform: translateX(-10px);
+          }
         }
       }
 
       &:hover {
         svg:first-child {
-          transform: translateX(9px);
+          transform: translateX(7px);
+          @include tab {
+            transform: translateX(10px);
+          }
         }
         svg:last-child {
           transform: translateX(100px);

@@ -17,7 +17,7 @@ const Fourth = () => {
     hidden: { rotate: 0, scale: 1 },
     active: {
       rotate: [10, -10, 10],
-      scale: [1.3, 1.3, 1.3],
+      scale: [1.2, 1.1, 1.2],
       transition: { duration: 1.2, repeat: Infinity },
     },
   };
