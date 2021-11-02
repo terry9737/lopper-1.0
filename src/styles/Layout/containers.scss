@@ -2,7 +2,6 @@
 @import "../variables/colors";
 .main_container {
   margin: 0 auto;
-  overflow: hidden;
   &.pink {
     background: pink;
   }
@@ -41,5 +40,6 @@
   &.full {
     width: 100%;
     padding: 0px;
+    overflow: hidden;
   }
 }

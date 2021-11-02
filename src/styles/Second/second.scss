@@ -14,7 +14,8 @@
 
   h5 {
     color: $white;
-    @include font-size(25px);
+    @include font-size(20px);
+    margin-right: 15px;
   }
 
   p {
@@ -30,7 +31,7 @@
   transition: all 0.3s linear;
 
   &:hover {
-    background: darken($purpleLigth, 10%);
+    background: darken($purpleLigth, 5%);
   }
 }
 .card_two {
@@ -39,7 +40,7 @@
   transition: all 0.3s linear;
 
   &:hover {
-    background: darken($purpleMedium, 20%);
+    background: darken($purpleMedium, 10%);
   }
 }
 .card_three {
@@ -48,7 +49,7 @@
   transition: all 0.3s linear;
 
   &:hover {
-    background: darken($purpleHard, 30%);
+    background: darken($purpleHard, 10%);
   }
 }
 
