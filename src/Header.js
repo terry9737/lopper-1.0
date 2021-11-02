@@ -3,7 +3,6 @@ import RightSlider from "./components/Header/RightSlider";
 import MainContainer from "./components/Layout/MainContainer";
 import Wrapper from "./components/Layout/Wrapper";
 import Navbar from "./components/navbar/navbar";
-
 const Header = () => {
   return (
     <>

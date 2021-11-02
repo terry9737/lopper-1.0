@@ -15,12 +15,27 @@
   .number_one {
     @include flex-center(column);
     margin-bottom: 50px;
+
     @include tab {
       margin-bottom: 0px;
     }
     h1 {
       @include font-size(99px);
       color: $red;
+      background-image: url("../../images/numbers/pattern-one.svg"),
+        linear-gradient(to right, $red, rgba(255, 255, 255, 0));
+      background-position: center;
+      background-size: 0%;
+      background-repeat: no-repeat;
+      background-clip: text;
+      -webkit-background-clip: text;
+      cursor: pointer;
+      transition: background-size 0.5s linear;
+
+      &:hover {
+        color: transparent;
+        background-size: 100%;
+      }
     }
 
     p {
@@ -35,12 +50,34 @@
     @extend .number_one;
     h1 {
       color: $purpleLigth;
+      background-image: url("../../images/numbers/pattern-two.svg"),
+        linear-gradient(to right, $red, rgba(255, 255, 255, 0));
+      background-position: center;
+      background-size: 0%;
+      background-repeat: no-repeat;
+      background-clip: text;
+      -webkit-background-clip: text;
+      cursor: pointer;
+      transition: background-size 0.5s linear;
     }
   }
   .number_three {
     @extend .number_one;
     h1 {
       color: $green;
+      background-image: url("../../images/numbers/pattern-three.svg"),
+        linear-gradient(to right, $red, rgba(255, 255, 255, 0));
+      background-position: center;
+      background-size: 0%;
+      background-repeat: no-repeat;
+      background-clip: text;
+      -webkit-background-clip: text;
+      cursor: pointer;
+      transition: background-size 0.5s linear;
+
+      &:hover {
+        background-size: 150%;
+      }
     }
   }
 }

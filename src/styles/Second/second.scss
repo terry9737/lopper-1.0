@@ -26,12 +26,30 @@
 
 .card_one {
   background: $purpleLigth;
+  cursor: pointer;
+  transition: all 0.3s linear;
+
+  &:hover {
+    background: darken($purpleLigth, 10%);
+  }
 }
 .card_two {
   background: $purpleMedium;
+  cursor: pointer;
+  transition: all 0.3s linear;
+
+  &:hover {
+    background: darken($purpleMedium, 20%);
+  }
 }
 .card_three {
   background: $purpleHard;
+  cursor: pointer;
+  transition: all 0.3s linear;
+
+  &:hover {
+    background: darken($purpleHard, 30%);
+  }
 }
 
 .second_image {

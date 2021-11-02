@@ -23,6 +23,7 @@
 
     div {
       @include flex-center(column);
+      width: 100%;
       @include mob-lan {
         @include flex-center(row);
         align-items: flex-end;

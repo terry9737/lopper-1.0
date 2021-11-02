@@ -122,32 +122,32 @@
 
 .dots_wrapper {
   .dot:nth-child(1) {
-    top: 180px;
-    left: calc(100vw - 90vw);
+    top: calc(100% - 89%);
+    left: calc(100% - 99%);
   }
   .dot:nth-child(2) {
-    top: 300px;
-    left: calc(100vw - 99vw);
+    top: calc(100% - 70%);
+    left: calc(100% - 100%);
   }
   .dot:nth-child(3) {
-    top: 100px;
-    left: calc(100vw - 95vw);
+    top: calc(100% - 52%);
+    left: calc(100% - 95%);
   }
   .dot:nth-child(4) {
-    top: calc(100vh - 50vh);
-    left: calc(100vw - 40vw);
+    top: calc(100% - 89%);
+    left: calc(100% - 30%);
   }
   .dot:nth-child(5) {
-    top: 200px;
-    left: calc(100vw - 40vw);
+    top: calc(100% - 69%);
+    left: calc(100% - 35%);
   }
   .dot:nth-child(6) {
-    top: 10px;
-    left: calc(100vw - 50vw);
+    top: calc(100% - 99%);
+    left: calc(100% - 39%);
   }
   .dot:nth-child(7) {
-    top: 400px;
-    left: calc(100vw - 45vw);
+    top: calc(100% - 99%);
+    left: calc(100% - 70%);
   }
   @include mob-lan {
     .dot {
@@ -160,6 +160,7 @@
   position: absolute;
   top: 0;
   max-width: 30%;
+  z-index: -10;
   @include tab {
     max-width: 50%;
   }

@@ -6,7 +6,7 @@ import mm from "../../images/footer/mm.svg";
 const FooterFollow = () => {
   return (
     <div className="footer_main-follow">
-      <p>Contact us</p>
+      <p>Follow us</p>
       <ul>
         <li>
           <a href="/">
